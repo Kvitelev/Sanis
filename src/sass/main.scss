@@ -1,0 +1,13 @@
+// Базовые компоненты
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "setings";
+
+// Крупные блоки
+@import "./components/partners";
+// Мелкие блоки
+@import "./components/header-top-nav";
+@import "./components/header-user-content";
+@import "./components/header-main-nav";
+@import "./components/header-slider";

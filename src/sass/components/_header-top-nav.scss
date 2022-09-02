@@ -1,0 +1,73 @@
+.header__top-nav {
+  background-color: $black;
+  min-height: 3px;
+}
+
+@include mobile-max {
+  .top-nav {
+    display: none;
+  }
+}
+
+@include desktop {
+  .top-nav {
+    @include flex-all-sb;
+    padding-top: 6px;
+    min-height: 33px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .top-nav__address {
+    position: relative;
+    color: $white;
+    padding-left: 77px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 63px;
+      width: 8px;
+      height: 12px;
+      background-image: url(../img/sprite/adress-maps.svg);
+      background-repeat: no-repeat;
+      background-size: 8px 12px;
+    }
+  }
+
+  .top-nav__navigation {
+    transform: translateX(-163px);
+    max-width: 500px;
+  }
+
+  .top-nav__list {
+    @include flex;
+    flex-wrap: wrap;
+    column-gap: 47px;
+  }
+
+  .top-nav__item {
+    margin-bottom: 5px;
+  }
+
+  .top-nav__link {
+    color: inherit;
+  }
+
+  .top-nav__title {
+    font-weight: inherit;
+    font-size: inherit;
+    transform: translateX(-331px);
+  }
+
+  .top-nav__phone {
+    font-size: 13px;
+    line-height: 15px;
+    color: inherit;
+    padding-right: 52px;
+  }
+}

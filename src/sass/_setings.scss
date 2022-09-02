@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.body {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 25px;
+  color: $black;
+}
+
+.container {
+  max-width: 335px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include desktop {
+    max-width: 1590px;
+    padding: 0 165px;
+  }
+}
+
+.btn {
+  @include flex-all-center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 20px;
+  padding: 0px 5px;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  &-decoration::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 142px;
+    width: 50px;
+    height: 3px;
+    background-color: $saffronMango;
+  }
+  @include desktop {
+    &-decoration::after {
+      left: 770px;
+    }
+  }
+}
+
+.header {
+  margin-bottom: 45px;
+  @include desktop {
+    margin-bottom: 114px;
+  }
+}
