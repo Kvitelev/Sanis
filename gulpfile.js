@@ -120,6 +120,12 @@ const copyImages = () => {
   .pipe(dest("build/img"))
 }
 
+// copyVideo
+const copyVideo = () => {
+  return src("src/video/**/*.mp4")
+  .pipe(dest("build/video"))
+}
+
 // Обработка Fonts
 const fonts = () => {
   return src("src/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}")
@@ -167,6 +173,7 @@ const watcher = () => {
   watch("src/js/**/*.js", script);
   watch("src/img/**/*.{jpg,png,svg}", optimizeImages);
   watch("src/img/**/*.{jpg,png,svg}", copyImages);
+  watch("src/video/**/*.mp4", copyVideo);
   watch("src/img/**/*.{jpg,png}", createWebp);
   watch("src/img/**/*.svg", sprite);
   watch("src/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}", fonts);
@@ -179,6 +186,7 @@ exports.vendor = vendor;
 exports.script = script;
 exports.images = optimizeImages;
 exports.images = copyImages;
+exports.copyVideo = copyVideo;
 exports.createWebp = createWebp;
 exports.fonts = fonts;
 exports.sprite = sprite;
@@ -187,12 +195,14 @@ exports.sprite = sprite;
 exports.build = series(
   clear,
   optimizeImages,
+  copyVideo,
   parallel (html, style, vendor, script, createWebp, fonts, sprite)
 );
 
 exports.dev = series(
   clear,
   copyImages,
+  copyVideo,
   parallel (html, style, vendor, script, createWebp, fonts, sprite),
   parallel (server, watcher)
 );

@@ -1,0 +1,50 @@
+.production {
+  margin-bottom: 75px;
+}
+
+.production__title {
+  line-height: 33px;
+  padding-bottom: 26px;
+  margin-bottom: 25px;
+}
+
+.production__description {
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.production__video {
+  width: 335px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: $black;
+}
+
+.production__box {
+  position: relative;
+}
+
+.production__controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+@include desktop {
+  .production__title {
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+
+  .production__description {
+    width: 970px;
+    margin: 0 auto 40px auto;
+  }
+
+  .production__video {
+    width: 1590px;
+    height: 600px;
+  }
+}

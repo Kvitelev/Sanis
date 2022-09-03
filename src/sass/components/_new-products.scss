@@ -1,0 +1,103 @@
+.new-products__box {
+  position: relative;
+}
+
+.new-products__title {
+  display: none;
+}
+
+.new-products__list {
+  margin-bottom: 79px;
+}
+
+.new-products__item {
+  position: relative;
+  background-color: $seashell;
+  border-radius: 10px;
+  padding: 105px 25px 32px 19px;
+}
+
+.new-products__link {
+  @include flex-v-center;
+  flex-direction: column;
+  margin-bottom: 9px;
+}
+
+.new-products__link-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $black;
+  order: 1;
+  margin: 0;
+}
+
+.new-products__link-img {
+  margin-bottom: 38px;
+}
+
+.new-products__description {
+  font-size: 12px;
+  line-height: 15px;
+  color: $dustyGray;
+}
+
+.new-products__icon {
+  @include flex-all-center;
+  position: absolute;
+  top: 26px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  border-radius: 3px;
+  padding: 0 5px;
+  min-height: 26px;
+  &--new {
+    left: 18px;
+    min-width: 72px;
+  }
+
+  &--hit {
+    left: 104px;
+    min-width: 34px;
+  }
+}
+
+.new-products__btn {
+  position: absolute;
+  top: 199px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: $black;
+  &--previous {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.banner {
+  @include flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 500px;
+  background-image: url(../img/poster/baner-mobile.jpg);
+  background-color: $swissCoffee;
+  background-repeat: no-repeat;
+  background-size: 335px 500px;
+}
+
+.banner__description {
+  font-size: 22px;
+  color: $white;
+  padding: 0 11px 0 23px;
+  margin-bottom: 19px;
+}

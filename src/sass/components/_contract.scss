@@ -1,0 +1,151 @@
+.contract {
+  margin-bottom: 75px;
+}
+
+.contract__flex {
+  @include flex-all-center;
+  flex-direction: column;
+  position: relative;
+}
+
+.contract__title {
+  width: 290px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  padding-bottom: 28px;
+  margin-bottom: 60px;
+}
+
+.contract__list {
+  @include flex;
+  counter-reset: number;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 170px;
+  margin-bottom: 30px;
+}
+
+.contract__item {
+  position: relative;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  &::after {
+    counter-increment: number;
+    content: counter(number);
+    position: absolute;
+    top: -140px;
+    left: 116px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $silver;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -95px;
+    height: 73px;
+    background-repeat: no-repeat;
+  }
+
+  &--application::before {
+    left: 95px;
+    width: 48px;
+    background-image: url(../img/sprite/application.svg);
+    background-size: 48px 73px;
+  }
+
+  &--document::before {
+    left: 80px;
+    width: 73px;
+    background-image: url(../img/sprite/document.svg);
+    background-size: 73px 73px;
+  }
+
+  &--contract::before {
+    left: 80px;
+    width: 63px;
+    background-image: url(../img/sprite/contract.svg);
+    background-size: 63px 73px;
+  }
+}
+
+.contract__btn {
+  width: 216px;
+  min-height: 42px;
+  color: $white;
+  background-color: $black;
+  margin-bottom: 45px;
+}
+
+.contract__btn-slider {
+  position: absolute;
+  top: 336px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px rgba($black, 0.15);
+  &--previous {
+    left: 0;
+  }
+  &--next{
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.contract__toggle {
+  @include flex;
+  column-gap: 12px;
+  &-btn {
+    width: 31px;
+    height: 2px;
+    background-color: $alto;
+  }
+  &-btn--active {
+    background-color: $black;
+  }
+}
+
+@include mobile-max {
+  .contract__item:not(:first-child) {
+      display: none;
+  }
+}
+
+@include desktop {
+  .contract__btn-slider,
+  .contract__toggle-btn {
+    display: none;
+  }
+
+  .contract {
+    margin-bottom: 125px;
+  }
+
+  .contract__title {
+    width: 450px;
+    margin-bottom: 65px;
+  }
+
+  .contract__list {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex-direction: row;
+    column-gap: 160px;
+    margin-bottom: 50px;
+  }
+
+  .contract__item {
+    &::after {
+      top: -157px;
+      left: 113px;
+    }
+  }
+
+  .contract__btn {
+    margin-bottom: 0;
+    margin-left: 295px;
+    align-self: flex-start;
+  }
+}
