@@ -1,3 +1,7 @@
+.new-products {
+  margin-bottom: 80px;
+}
+
 .new-products__box {
   position: relative;
 }
@@ -42,19 +46,13 @@
   color: $dustyGray;
 }
 
-.new-products__icon {
-  @include flex-all-center;
-  position: absolute;
-  top: 26px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $black;
-  border-radius: 3px;
-  padding: 0 5px;
-  min-height: 26px;
+.products-icon {
+  &--new,
+  &--hit {
+    top: 26px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
   &--new {
     left: 18px;
     min-width: 72px;
@@ -93,6 +91,7 @@
   background-color: $swissCoffee;
   background-repeat: no-repeat;
   background-size: 335px 500px;
+  border-radius: 10px;
 }
 
 .banner__description {
@@ -100,4 +99,105 @@
   color: $white;
   padding: 0 11px 0 23px;
   margin-bottom: 19px;
+}
+
+@include desktop {
+  .new-products {
+    margin-bottom: 122px;
+  }
+
+  .new-products__title {
+    display: block;
+    padding-bottom: 27px;
+    margin-bottom: 50px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -136px;
+      right: -182px;
+      width: 399px;
+      height: 265px;
+      background-image: url(../img/logo/sanis-bg.png);
+      background-size: 399px 265px;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  .new-products__list {
+    @include flex-all-center;
+    gap: 10px;
+    margin-bottom: 119px;
+  }
+
+  .new-products__item{
+    padding: 105px 25px 24px 24px;
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .new-products__link-img {
+    width: 330px;
+    height: 314px;
+    margin-bottom: 6px;
+  }
+
+  .products-icon {
+    &--new {
+      left: 24px;
+
+    }
+
+    &--hit {
+      left: 109px;
+    }
+
+    &--hit-only {
+      left: 24px;
+    }
+  }
+
+  .new-products__btn {
+    top: 333px;
+    width: 45px;
+    height: 45px;
+    &--previous {
+      left: 142px;
+    }
+
+    &--next {
+      right: 142px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .new-product__btn-icon {
+    width: 15px;
+    height: 14px;
+  }
+
+  .banner {
+    justify-content: flex-start;
+    align-items: flex-end;
+    min-height: 600px;
+    background-image: url(../img/poster/baner-desktop.jpg);
+    background-size: 100% 600px;
+  }
+
+  .banner__description {
+    font-size: 30px;
+    line-height: 33px;
+    color: $white;
+    padding: 156px 87px 0 23px;
+    margin-bottom: 0px;
+  }
+}
+
+@include mobile-max {
+  .new-products__item{
+    &:not(:first-child) {
+      display: none;
+    }
+  }
 }

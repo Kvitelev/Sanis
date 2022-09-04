@@ -1,0 +1,338 @@
+.catalog__title {
+  padding-bottom: 25px;
+  margin-bottom: 32px;
+}
+
+.catalog__list {
+  @include flex;
+  flex-wrap: wrap;
+  column-gap: 9px;
+  row-gap: 29px;
+  margin-bottom: 37px;
+}
+
+.catalog__item {
+  @include flex;
+  flex-direction: column;
+}
+
+.catalog__product-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  order: 1;
+}
+
+.catalog__probuct-bg {
+  width: 163px;
+  height: 163px;
+  background-color: $seashell;
+  border-radius: 10px;
+  margin-bottom: 7px;
+}
+
+.catalog__link {
+  display: block;
+  min-width: 163px;
+  min-height: 163px;
+  border-radius: 10px;
+  &--necklace {
+    background: url(../img/catalog/Necklace.png) no-repeat center;
+    background-size: 163px 163px;
+  }
+  &--rings {
+    background: url(../img/catalog/Rings.png) no-repeat center;
+    background-size: 126px 143px;
+  }
+  &--bracelets {
+    background: url(../img/catalog/Bracelets.png) no-repeat center;
+    background-size: 163px 163px;
+  }
+  &--suspensions {
+    background: url(../img/catalog/suspensions.png) no-repeat center;
+    background-size: 163px 163px;
+  }
+  &--cufflinks {
+    background: url(../img/catalog/cufflinks.png) no-repeat center;
+    background-size: 163px 125px;
+  }
+  &--gifts {
+    background: url(../img/catalog/gifts.png) no-repeat center;
+    background-size: 159px 155px;
+  }
+  &--religious {
+    background: url(../img/catalog/religious.png) no-repeat center;
+    background-size: 129px 157px;
+  }
+  &--wood {
+    background: url(../img/catalog/wood.png) no-repeat center;
+    background-size: 114px 153px;
+  }
+  &--collections {
+    background: url(../img/catalog/collections.png) no-repeat center;
+    background-size: 143px 127px;
+  }
+  &--brooches {
+    background: url(../img/catalog/brooches.png) no-repeat center;
+    background-size: 163px 162px;
+  }
+}
+
+.catalog__btn {
+  border: 2px solid $black;
+  width: 100%;
+  min-height: 40px;
+}
+
+
+@include desktop {
+  .catalog__flex {
+    @include flex-all-center;
+    flex-direction: column;
+  }
+
+  .catalog__title {
+    margin-bottom: 36px;
+  }
+
+  .catalog__btn {
+    width: 310px;
+    color: $white;
+    background-color: $black;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(5, 310px);
+    grid-template-rows: repeat(3, 310px);
+    gap: 10px;
+    margin-bottom: 46px;
+  }
+
+  .catalog__item {
+    position: relative;
+    background-color: $seashell;
+    border-radius: 10px;
+    &--necklace {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+    &--rings {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+    &--bracelets {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+    &--suspensions {
+      grid-column: 5/6;
+      grid-row: 1/2;
+    }
+    &--cufflinks {
+      grid-column: 3/5;
+      grid-row: 2/3;
+    }
+    &--gifts {
+      grid-column: 5/6;
+      grid-row: 2/3;
+    }
+    &--religious {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    &--wood {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    &--collections {
+      grid-column: 3/4;
+      grid-row: 3/4;
+    }
+    &--brooches {
+      grid-column: 4/5;
+      grid-row: 3/4;
+    }
+    &--piercing {
+      grid-column: 5/6;
+      grid-row: 3/4;
+    }
+  }
+
+  .catalog__product-title {
+    order: 0;
+    padding: 25px 0 0 20px;
+  }
+
+  .catalog__probuct-bg {
+    width: 0;
+    height: 0;
+    background-color: $seashell;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
+
+  .catalog__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    &--necklace {
+      min-width: 630px;
+      min-height: 300px;
+      background: url(../img/catalog/Necklace-desktop.png) no-repeat center;
+      background-size: 630px 300px;
+    }
+    &--rings {
+      min-width: 172px;
+      min-height: 196px;
+      background-size: 172px 196px;
+    }
+    &--bracelets {
+      min-width: 243px;
+      min-height: 243px;
+      background-size: 243px 243px;
+    }
+    &--suspensions {
+      min-width: 252px;
+      min-height: 252px;
+      background-size: 252px 252px;
+    }
+    &--cufflinks {
+      min-width: 342px;
+      min-height: 262px;
+      background-size: 342px 262px;
+    }
+    &--gifts {
+      min-width: 277px;
+      min-height: 271px;
+      background-size: 277px 271px;
+    }
+    &--religious {
+      min-width: 180px;
+      min-height: 223px;
+      background-size: 180px 223px;
+    }
+    &--wood {
+      min-width: 157px;
+      min-height: 228px;
+      background-size: 157px 228px;
+    }
+    &--collections {
+      min-width: 226px;
+      min-height: 201px;
+      background-size: 226px 201px;
+    }
+    &--brooches {
+      min-width: 239px;
+      min-height: 239px;
+      background-size: 239px 239px;
+    }
+    &--piercing {
+      min-width: 95px;
+      min-height: 183px;
+      background: url(../img/catalog/piercing.png) no-repeat center;
+      background-size: 95px 183px;
+    }
+  }
+
+  .products-icon {
+    &--all,
+    &--gloves {
+      bottom: 24px;
+    }
+    &--all {
+      left: 20px;
+      min-width: 29px;
+    }
+    &--gloves {
+      left: 64px;
+      min-width: 69px;
+    }
+
+    &--chain,
+    &--thread,
+    &--links {
+      bottom: 53px;
+    }
+    &--chain {
+      left: 20px;
+      min-width: 79px;
+    }
+    &--thread {
+      left: 113px;
+      min-width: 63px;
+    }
+    &--links {
+      left: 190px;
+      min-width: 77px;
+    }
+
+    &--molding,
+    &--stamped,
+    &--rolexes {
+      bottom: 23px;
+    }
+    &--molding {
+      left: 20px;
+      min-width: 70px;
+    }
+    &--stamped {
+      left: 104px;
+      min-width: 104px;
+    }
+    &--rolexes {
+      left: 222px;
+      min-width: 62px;
+    }
+
+    &--christian,
+    &--muslim {
+      bottom: 24px;
+    }
+    &--christian {
+      left: 20px;
+      min-width: 98px;
+    }
+    &--muslim {
+      left: 131px;
+      min-width: 108px;
+    }
+
+    &--earrings {
+      bottom: 53px;
+      left: 20px;
+      min-width: 52px;
+    }
+
+    &--crosses,
+    &--suspensions,
+    &--cufflinks {
+      bottom: 23px;
+    }
+    &--crosses {
+      left: 20px;
+      min-width: 54px;
+    }
+    &--suspensions {
+      left: 88px;
+      min-width: 69px;
+    }
+    &--cufflinks {
+      left: 171px;
+      min-width: 58px;
+    }
+  }
+}
+
+@include mobile-max {
+  .catalog__item:last-child {
+    display: none;
+  }
+
+  .catalog__icon {
+    display: none;
+  }
+}

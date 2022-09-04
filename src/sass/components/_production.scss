@@ -33,6 +33,10 @@
 }
 
 @include desktop {
+  .production {
+    margin-bottom: 115px;
+  }
+
   .production__title {
     line-height: 24px;
     margin-bottom: 28px;
@@ -46,5 +50,14 @@
   .production__video {
     width: 1590px;
     height: 600px;
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+@include mobile-max {
+  .production__video--desktop {
+    display: none;
   }
 }

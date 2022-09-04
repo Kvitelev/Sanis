@@ -27,6 +27,11 @@ p {
   }
 }
 
+.main {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 335px;
   margin: 0 auto;
@@ -97,4 +102,17 @@ p {
   @include desktop {
     margin-bottom: 114px;
   }
+}
+
+.products-icon {
+  @include flex-all-center;
+  position: absolute;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  background-color: $black;
+  border-radius: 3px;
+  padding: 0 5px;
+  min-height: 26px;
 }
