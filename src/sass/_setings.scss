@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *::before,
@@ -27,9 +28,20 @@ p {
   }
 }
 
-.main {
-  width: 100vw;
-  overflow-x: hidden;
+.header {
+  margin-bottom: 47px;
+  &-contact {
+    margin-bottom: 30px;
+  }
+  &-news {
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 114px;
+    &-contact {
+      margin-bottom: 51px;
+    }
+  }
 }
 
 .container {
@@ -94,13 +106,6 @@ p {
     width: 50px;
     height: 3px;
     background-color: $saffronMango;
-  }
-}
-
-.header {
-  margin-bottom: 45px;
-  @include desktop {
-    margin-bottom: 114px;
   }
 }
 

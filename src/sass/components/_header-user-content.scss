@@ -1,6 +1,7 @@
 .header__user-content {
   position: relative;
   padding-top: 5px;
+  box-shadow: 0px 2px 10px rgba($black, 0.1);
 }
 
 .btn-burger {
@@ -33,6 +34,10 @@
 }
 
 @include desktop {
+  .header__user-content {
+    box-shadow: none;
+  }
+
   .btn-burger {
     display: none;
   }
@@ -53,9 +58,10 @@
   }
 
   .header__logo {
+    position: relative;
+    left: 52px;
     width: 118px;
     height: 86px;
-    margin-left: 105px;
   }
 
   .header__search {

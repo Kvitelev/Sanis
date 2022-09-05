@@ -1,0 +1,116 @@
+.news-page {
+  &__top-blok {
+    margin-bottom: 38px;
+  }
+}
+
+.news-page__title {
+  font-size: 26px;
+  line-height: 29px;
+  text-transform: none;
+  margin-bottom: 18px;
+  &-second {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 19px;
+  }
+}
+
+.transform {
+  text-transform: uppercase;
+}
+
+.news-page__blok {
+  position: relative;
+  &--one {
+    margin-bottom: 32px;
+  }
+  &--two {
+    margin-bottom: 36px;
+  }
+  &--three {
+    margin-bottom: 29px;
+  }
+  &--four {
+    margin-bottom: 36px;
+  }
+  &--five {
+    margin-bottom: 11px;
+  }
+}
+
+.news-page__bg {
+  width: 335px;
+  height: 440px;
+  background-size: 335px 440px;
+  background-repeat: no-repeat;
+  background-color: $swissCoffee;
+  &-set {
+    @include flex;
+    column-gap: 5px;
+    margin-bottom: 39px;
+  }
+  &--news-1 {
+    background-image: url(../img/news/news-page-1.jpg);
+    border-radius: 10px;
+    margin-bottom: 36px;
+  }
+  &--news-2 {
+    background-image: url(../img/news/news-page-2.jpg);
+    margin-bottom: 23px;
+  }
+  &--news-3 {
+    background-image: url(../img/news/news-page-3.jpg);
+    margin-bottom: 34px;
+  }
+  &--earrings-1,
+  &--earrings-2 {
+    width: 165px;
+    height: 165px;
+    background-size: 165px 165px;
+  }
+  &--earrings-1 {
+    background-image: url(../img/news/earrings-1.jpg);
+  }
+  &--earrings-2 {
+    background-image: url(../img/news/earrings-2.jpg);
+  }
+}
+
+.news-page__text-box {
+  margin-bottom: 34px;
+}
+
+.news-page__text {
+  margin-bottom: 14px;
+}
+
+.news-page__list {
+  @include flex-all-center;
+  flex-wrap: wrap;
+  column-gap: 26px;
+  margin-bottom: 25px;
+}
+
+.news-page__item {
+  @include flex-all-center;
+  width: 55px;
+  height: 55px;
+  border: 2px solid $black;
+  border-radius: 50%;
+}
+
+.news-page__social {
+  fill: $black;
+}
+
+.news-page__btn {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 15px;
+  border: 2px solid $black;
+  border-radius: 3px;
+  width: 335px;
+  min-height: 45px;
+}

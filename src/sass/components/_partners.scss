@@ -3,6 +3,9 @@
   &__box {
     position: relative;
   }
+  &-contacts {
+    margin-bottom: 60px;
+  }
 }
 
 .partners__title {
@@ -10,6 +13,13 @@
   line-height: 28px;
   padding-bottom: 21px;
   margin-bottom: 29px;
+  &--contacts {
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: none;
+    padding: 0;
+    margin-bottom: 18px;
+  }
 }
 
 .partners__item {
@@ -40,6 +50,9 @@
 @include desktop {
   .partners {
     margin-bottom: 114px;
+    &-contacts {
+      margin-bottom: 117px;
+    }
   }
 
   .partners__item {
@@ -50,6 +63,10 @@
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 42px;
+    &--contacts {
+      font-size: 33px;
+      margin-bottom: 29px;
+    }
   }
 
   .partners__list {
