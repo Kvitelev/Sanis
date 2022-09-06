@@ -1,0 +1,252 @@
+.products {
+  margin-bottom: 50px;
+}
+
+.products__title {
+  text-align: start;
+  text-transform: none;
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 26px;
+  &-second {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 7px;
+  }
+}
+
+.products__filters {
+  @include flex-all-sb;
+  margin-bottom: 10px;
+}
+
+.products__btn {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: none;
+  border: 2px solid $black;
+  width: 100%;
+  min-height: 45px;
+  &-filters {
+    position: relative;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 11px;
+    text-transform: uppercase;
+    &--sort {
+      padding-left: 18px;
+    }
+    &--sort::after,
+    &--filters::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 13px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-size: 13px 10px;
+    }
+    &--sort::after {
+      left: 0;
+      background-image: url(../img/sprite/sort.svg);
+    }
+    &--filters::after {
+      left: -15px;
+      background-image: url(../img/sprite/filters.svg);
+    }
+  }
+}
+
+.products__list {
+  @include flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 25px;
+  margin-bottom: 26px;
+}
+
+.products__item {
+  @include flex;
+  position: relative;
+  flex-direction: column;
+  width: 165px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  &--big {
+    width: 100%;
+    margin-bottom: 1px;
+  }
+}
+
+.products__link {
+  @include flex-all-center;
+  width: 165px;
+  height: 230px;
+  background-color: $seashell;
+  order: -1;
+  margin-bottom: 10px;
+  &--big {
+    width: 100%;
+    height: 380px;
+  }
+}
+
+.products__prise {
+  &-old {
+    font-size: 10px;
+    line-height: 12px;
+    color: $dustyGray;
+    text-decoration: line-through;
+    margin-left: 4px;
+  }
+}
+
+.products__icon {
+  @include flex-all-center;
+  position: absolute;
+  font-size: 10px;
+  line-height: 12px;
+  color: $white;
+  background-color: $black;
+  border-radius: 1px;
+  min-height: 15px;
+  padding: 0 5px;
+  &--new {
+    top: 11px;
+    left: 10px;
+    width: 40px;
+  }
+  &--hit {
+    top: 11px;
+    left: 61px;
+    width: 16px;
+    &-only {
+      left: 10px;
+    }
+  }
+  &--discount {
+    bottom: 88px;
+    right: 0;
+    width: 24px;
+  }
+}
+
+.category,
+.sorting,
+.filters {
+  display: none;
+}
+
+@include desktop {
+  .products__filters {
+    display: none;
+  }
+
+  .products__item {
+    &--big {
+      display: none;
+    }
+  }
+
+  .category,
+  .sorting,
+  .filters {
+    display: block;
+  }
+
+  .products__title {
+    font-size: 33px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .category {
+    margin-bottom: 40px;
+  }
+
+  .category__list {
+    @include flex-all-center;
+    flex-wrap: wrap;
+    column-gap: 87px;
+  }
+
+  .category__item {
+    position: relative;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .category__link {
+    color: $boulder;
+    padding-left: 40px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+    &--busets::after {
+      top: -4px;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background-size: 26px 26px;
+      background-image: url(../img/sprite/busets.svg);
+    }
+    &--congo::after {
+      top: -4px;
+      left: -13px;
+      width: 26px;
+      height: 23px;
+      background-size: 26px 23px;
+      background-image: url(../img/sprite/congo.svg);
+    }
+    &--stones::after {
+      top: -9px;
+      left: -7px;
+      width: 26px;
+      height: 30px;
+      background-size: 26px 30px;
+      background-image: url(../img/sprite/stones.svg);
+    }
+    &--category::after {
+      top: -1px;
+      left: 9px;
+      width: 21px;
+      height: 15px;
+      background-size: 21px 15px;
+      background-image: url(../img/sprite/category.svg);
+    }
+  }
+
+  .sorting {
+    @include flex-all-center;
+    column-gap: 50px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .sorting__btn {
+    position: relative;
+    font-weight: 600;
+    &--active {
+      font-weight: 500;
+      border-bottom: 1px solid $black;
+    }
+    &--icon::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 11px;
+      height: 6px;
+      background-image: url(../img/sprite/sort-icon.svg);
+      background-repeat: no-repeat;
+      background-size: 11px 6px;
+    }
+  }
+}

@@ -30,16 +30,23 @@ p {
 
 .header {
   margin-bottom: 47px;
-  &-contact {
-    margin-bottom: 30px;
-  }
+  &-contact,
   &-news {
     margin-bottom: 30px;
+  }
+  &-products {
+    margin-bottom: 32px;
   }
   @include desktop {
     margin-bottom: 114px;
     &-contact {
       margin-bottom: 51px;
+    }
+    &-news {
+      margin-bottom: 49px;
+    }
+    &-products {
+      margin-bottom: 56px;
     }
   }
 }
@@ -107,17 +114,4 @@ p {
     height: 3px;
     background-color: $saffronMango;
   }
-}
-
-.products-icon {
-  @include flex-all-center;
-  position: absolute;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: $white;
-  background-color: $black;
-  border-radius: 3px;
-  padding: 0 5px;
-  min-height: 26px;
 }

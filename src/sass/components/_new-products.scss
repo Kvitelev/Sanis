@@ -47,11 +47,21 @@
 }
 
 .products-icon {
+  @include flex-all-center;
+  position: absolute;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $white;
+  background-color: $black;
+  border-radius: 3px;
+  padding: 0 5px;
+  min-height: 26px;
   &--new,
   &--hit {
-    top: 26px;
     text-transform: uppercase;
     font-weight: 600;
+    top: 26px;
   }
   &--new {
     left: 18px;
@@ -146,7 +156,6 @@
   .products-icon {
     &--new {
       left: 24px;
-
     }
 
     &--hit {
