@@ -37,6 +37,9 @@ p {
   &-products {
     margin-bottom: 32px;
   }
+  &-product-page {
+    margin-bottom: 0;
+  }
   @include desktop {
     margin-bottom: 114px;
     &-contact {
