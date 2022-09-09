@@ -28,3 +28,20 @@ btnMenu.addEventListener('click', function () {
     menu.classList.add("header__nav");
   }
 })
+
+// Popup
+const btnPopup = document.querySelector(".contract__btn");
+const btnClose = document.querySelector(".popup__close");
+const popup = document.querySelector(".popup");
+
+btnPopup.addEventListener('click', function () {
+  popup.style.display = 'block';
+})
+btnClose.addEventListener('click', function () {
+  popup.style.display = 'none';
+})
+document.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    popup.style.display = 'none';
+  }
+});

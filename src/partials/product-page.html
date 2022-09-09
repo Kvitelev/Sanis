@@ -2,7 +2,10 @@
   <div class="container">
     <div class="product-page__flex">
       <div class="product-page__box-img">
-        <img class="product-page__img" src="img/products/product-page-1.png" alt="Золотые серьги с бриллиантами" width="198" height="362">
+        <picture>
+          <source media="(min-width: 1920px)" srcset="img/products/products-desctop-12.png" width="790" height="750">
+          <img class="product-page__img" src="img/products/product-page-1.png" alt="Золотые серьги с бриллиантами" width="198" height="362">
+        </picture>
         <div class="product-page__box-toggle">
           <button class="btn-reset product-page__toggle product-page__toggle--active" aria-label="Переключить изоброжение товара"></button>
           <button class="btn-reset product-page__toggle" aria-label="Переключить изоброжение товара"></button>
@@ -10,11 +13,32 @@
         </div>
         <span class="products__icon products__icon--product-new">Новинка</span>
         <span class="products__icon products__icon--product-hit">Хит</span>
+        <span class="products__icon products__icon--product-stocks">Акции</span>
         <span class="products__icon products__icon--product-discount">-22%</span>
+        <ul class="list-reset product-page__list-img">
+          <li class="product-page__item-img">
+            <img class="product-page__img" src="img/products/product-page-1.png" alt="Золотые серьги с бриллиантами" width="49" height="74">
+          </li>
+          <li class="product-page__item-img">
+            <img class="product-page__img" src="../img/products/product-page-1-2.png" alt="Золотые серьги с бриллиантами" width="21" height="71">
+          </li>
+          <li class="product-page__item-img">
+            <img class="product-page__img" src="img/products/products-desctop-12.png" alt="Золотые серьги с бриллиантами" width="78" height="75">
+          </li>
+        </ul>
+        <button class="btn-reset product-page__btn-increase" aria-label="Увеличить изоброжение">
+          <svg class="product-page__icon-increase" width="30" height="30">
+            <use xlink:href="img/sprite.svg#increase"></use>
+          </svg>
+        </button>
       </div>
       <div class="product-page__box-probuct">
-        <h1 class="title product-page__title">Классическтй комплект со смокингом и желетом</h1>
-        <p class="products-page__prise">120 300 &#8381;<span class="products-page__prise-old">150 300 &#8381;</span></p>
+        <p class="product-page__article">Артикул: 4794390</p>
+        <h1 class="title product-page__title product-page__title--mobile">Классическтй комплект со смокингом и желетом</h1>
+        <h1 class="title product-page__title product-page__title--desktop">Серьги из белого золота с бриллиантами</h1>
+        <p class="product-page__composition">Состав: белое золото 585 пробы, бриллианты</p>
+        <p class="products-page__prise products-page__prise--mobile">120 300 &#8381;<span class="products-page__prise-old">150 300 &#8381;</span></p>
+        <p class="products-page__prise products-page__prise--desktop">от 100 000 &#8381;</p>
         <div class="sizes">
           <h2 class="title product-page__title product-page__title--sizes">Размеры</h2>
           <ul class="list-reset sizes__list">
@@ -31,6 +55,16 @@
             <li class="sizes__item">
               <p class="sizes__number">16</p>
               <span class="sizes__price">90 000 &#8381;/шт.</span>
+              <span class="sizes__availability">0</span>
+            </li>
+            <li class="sizes__item sizes__item--desktop">
+              <p class="sizes__number">16.5</p>
+              <span class="sizes__price">250 000 &#8381;/шт.</span>
+              <span class="sizes__availability">2</span>
+            </li>
+            <li class="sizes__item sizes__item--desktop">
+              <p class="sizes__number">17</p>
+              <span class="sizes__price">250 000 &#8381;/шт.</span>
               <span class="sizes__availability">0</span>
             </li>
           </ul>
@@ -71,26 +105,40 @@
           консультация с широким активом представляет собой интересный эксперимент.
         </p>
         <ul class="list-reset products__list products__list--complete">
-          <li class="products__item">
+          <li class="products__item products__item--mobile">
             <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
             <a class="products__link products__link--complete" href="#" aria-label="Переход на страницу товара">
               <img class="products__link-img" src="img/products/products-earrings.png" alt="" width="130" height="130">
             </a>
             <p class="products__prise">24 000 &#8381;<span class="products__prise-old">44 000 &#8381;</span></p>
           </li>
-          <li class="products__item">
+          <li class="products__item products__item--mobile">
             <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
             <a class="products__link products__link--complete" href="#" aria-label="Переход на страницу товара">
               <img class="products__link-img" src="img/products/products-7.png" alt="" width="162" height="152">
             </a>
             <p class="products__prise">35 000 &#8381;<span class="products__prise-old">37 000 &#8381;</span></p>
           </li>
+          <li class="products__item products__item--desktop">
+            <h3 class="products__title-second products__title-second--complete">Кольцо из белого золота с бриллиантами</h3>
+            <a class="products__link products__link--complete" href="#" aria-label="Переход на страницу товара">
+              <img class="products__link-img" src="img/products/products-4.png" alt="" width="125" height="137">
+            </a>
+            <p class="products__prise products__prise--complete">35 000 &#8381;</p>
+          </li>
+          <li class="products__item products__item--desktop">
+            <h3 class="products__title-second products__title-second--complete">Кольцо из белого золота с бриллиантами</h3>
+            <a class="products__link products__link--complete" href="#" aria-label="Переход на страницу товара">
+              <img class="products__link-img" src="img/products/products-earrings.png" alt="" width="115" height="115">
+            </a>
+            <p class="products__prise products__prise--complete">35 000 &#8381;</p>
+          </li>
         </ul>
       </div>
     </div>
     <div class="suggest">
       <h2 class="title product-page__title product-page__title--suggest">Рекомендуем</h2>
-      <ul class="list-reset products__list products__list--suggest">
+      <ul class="list-reset products__list products__list--mobile products__list--suggest">
         <li class="products__item">
           <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
           <a class="products__link" href="#" aria-label="Переход на страницу товара">
@@ -127,6 +175,55 @@
           <p class="products__prise">35 000 &#8381;<span class="products__prise-old">37 000 &#8381;</span></p>
           <span class="products__icon products__icon--new">Новинка</span>
           <span class="products__icon products__icon--discount">-9%</span>
+        </li>
+      </ul>
+
+      <ul class="list-reset products__list products__list--desktop products__list--suggest">
+        <li class="products__item">
+          <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
+          <a class="products__link" href="#" aria-label="Переход на страницу товара">
+            <img class="products__link-img" src="img/products/products-2.png" alt="" width="256" height="256">
+          </a>
+          <p class="products__prise">24 000 &#8381;<span class="products__prise-old">44 000 &#8381;</span></p>
+          <span class="products__icon products__icon--new">Новинка</span>
+          <span class="products__icon products__icon--hit">Хит</span>
+          <span class="products__icon products__icon--discount">-15%</span>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title-second">Подвеска из дерева и золота</h3>
+          <a class="products__link" href="#" aria-label="Переход на страницу товара">
+            <img class="products__link-img" src="img/products/products-1.png" alt="" width="172" height="275">
+          </a>
+          <p class="products__prise">35 000 &#8381;<span class="products__prise-old">65 000 &#8381;</span></p>
+          <span class="products__icon products__icon--new">Новинка</span>
+          <span class="products__icon products__icon--discount">-22%</span>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title-second">Кольцо из белого золота <br> с бриллиантами</h3>
+          <a class="products__link" href="#" aria-label="Переход на страницу товара">
+            <img class="products__link-img" src="img/products/products-desctop-10.png" alt="" width="310" height="335">
+          </a>
+          <p class="products__prise">19 000 &#8381;</p>
+          <span class="products__icon products__icon--hit products__icon--hit-only">Хит</span>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
+          <a class="products__link" href="#" aria-label="Переход на страницу товара">
+            <img class="products__link-img" src="img/products/products-3.png" alt="" width="282" height="282">
+          </a>
+          <p class="products__prise">21 000 &#8381;<span class="products__prise-old">24 000 &#8381;</span></p>
+          <span class="products__icon products__icon--new">Новинка</span>
+          <span class="products__icon products__icon--hit">Хит</span>
+          <span class="products__icon products__icon--discount">-30%</span>
+        </li>
+        <li class="products__item">
+          <h3 class="products__title-second">Кольцо из белого золота с бриллиантами</h3>
+          <a class="products__link" href="#" aria-label="Переход на страницу товара">
+            <img class="products__link-img" src="img/products/products-5.png" alt="" width="270" height="222">
+          </a>
+          <p class="products__prise">135 000 &#8381;<span class="products__prise-old">184 000 &#8381;</span></p>
+          <span class="products__icon products__icon--hit products__icon--hit-only">Хит</span>
+          <span class="products__icon products__icon--discount">-15%</span>
         </li>
       </ul>
     </div>

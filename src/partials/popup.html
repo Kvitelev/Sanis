@@ -1,0 +1,27 @@
+<section class="popup">
+  <div class="container">
+    <form action="https://echo.htmlacademy.ru" method="post" class="popup__form" target="_blank">
+        <h2 class="title popup__title">Запросить консультацию</h2>
+        <div class="popup__item">
+          <label class="popup__label" for="name">Имя</label>
+          <input class="popup__input" type="text" name="name" id="name">
+        </div>
+        <div class="popup__item">
+          <label class="popup__label" for="tel">Телефон</label>
+          <input class="popup__input" type="tel" name="tel" id="tel">
+        </div>
+        <div class="popup__item-introduction">
+          <input class="popup__checkbox visually-hidden" type="checkbox" name="introduction" id="introduction" checked>
+          <label class="popup__introduction" for="introduction">
+            Я ознакомился с <a class="popup__introduction-link" href="#">соглашением сервиса</a> и согласен <a class="popup__introduction-link" href="#">с условиями пре­до­ста­вле­ния услуг</a>
+          </label>
+        </div>
+        <button class="btn-reset popup__btn" type="submit">Отправить</button>
+        <button class="btn-reset popup__close" type="button" aria-label="Закрыть окно">
+          <svg class="footer__social-icon" width="12" height="12">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+    </form>
+  </div>
+</section>
