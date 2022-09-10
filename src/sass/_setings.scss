@@ -40,6 +40,12 @@ p {
   &-product-page {
     margin-bottom: 0;
   }
+  &-basket {
+    margin-bottom: 32px;
+  }
+  &-registration {
+    margin-bottom: 30px;
+  }
   @include desktop {
     margin-bottom: 114px;
     &-contact {
@@ -54,7 +60,17 @@ p {
     &-product-page {
       margin-bottom: 60px;
     }
+    &-basket {
+      margin-bottom: 50px;
+    }
+    &-registration {
+      margin-bottom: 50px;
+    }
   }
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 .container {

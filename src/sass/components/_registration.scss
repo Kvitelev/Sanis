@@ -1,0 +1,157 @@
+.registration {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 74px;
+}
+
+.registration__title {
+  font-size: 26px;
+  line-height: 29px;
+  text-transform: none;
+  margin-bottom: 13px;
+  &-second {
+    text-align: start;
+    font-size: 12px;
+    line-height: 13px;
+    margin-bottom: 9px;
+  }
+}
+
+.registration__decription {
+  text-align: center;
+  font-size: 16px;
+  width: 270px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.registration__link {
+  color: inherit;
+  border-bottom: 1px solid $black;
+}
+
+.registration__wrapper,
+.registration__meaning {
+  margin: 0;
+}
+
+.registration__wrapper {
+  background-color: $athensGray;
+  padding: 26px 23px 33px 17px;
+  margin-bottom: 34px;
+}
+
+.registration__box {
+  @include flex-all-sb;
+}
+
+.registration__kay,
+.registration__meaning {
+  line-height: 30px;
+}
+
+.registration__meaning {
+  font-weight: 600;
+}
+
+.registration__list {
+  margin-bottom: 40px;
+}
+
+.registration__item {
+  @include flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.registration__label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  &--required::after {
+    content: "*";
+    margin-left: 4px;
+  }
+}
+
+.registration__input {
+  font-size: inherit;
+  line-height: inherit;
+  border: 2px solid $black;
+  border-radius: 3px;
+  padding: 0 15px;
+  min-height: 56px;
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.registration__btn {
+  text-transform: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: $white;
+  background-color: $black;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 3px;
+  &-list {
+    position: absolute;
+    top: 35px;
+    right: 13px;
+  }
+}
+
+@include desktop {
+  .registration {
+    position: relative;
+    margin-bottom: 109px;
+  }
+
+  .registration__title {
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 13px;
+  }
+
+  .registration__decription {
+    line-height: 30px;
+    width: 500px;
+    margin-bottom: 35px;
+  }
+
+  .registration__result {
+    position: absolute;
+    top: 118px;
+    right: 161px;
+  }
+
+  .registration__wrapper {
+    width: 355px;
+    margin-bottom: 0;
+    padding: 31px 29px 40px 11px;
+  }
+
+  .registration__form {
+    width: 470px;
+    margin: auto;
+  }
+
+  .registration__item {
+    margin-bottom: 39px;
+  }
+
+  .registration__input {
+    border-color: $silver;
+    &--textarea {
+      min-height: 120px;
+    }
+  }
+}

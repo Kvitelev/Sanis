@@ -1,0 +1,98 @@
+<section class="registration">
+  <div class="container">
+    <h1 class="title registration__title">Оформления заказа</h1>
+    <p class="registration__decription">
+      Выберите <a class="registration__link" href="#">профиль заказа</a> или <a class="registration__link" href="#">создайте новый профиль</a>
+    </p>
+    <div class="registration__result">
+      <h2 class="title registration__title-second">Товары в заказе:</h2>
+      <dl class="registration__wrapper">
+        <div class="registration__box">
+          <dt class="registration__kay">Наименований</dt>
+          <dd class="registration__meaning">7</dd>
+        </div>
+        <div class="registration__box">
+          <dt class="registration__kay">Количество товаров</dt>
+          <dd class="registration__meaning">98</dd>
+        </div>
+        <div class="registration__box">
+          <dt class="registration__kay">Общий вес</dt>
+          <dd class="registration__meaning">230 г.</dd>
+        </div>
+        <div class="registration__box">
+          <dt class="registration__kay">Стоймость</dt>
+          <dd class="registration__meaning">396 000 &#8381;</dd>
+        </div>
+        <div class="registration__box">
+          <dt class="registration__kay">Стоймость доставки</dt>
+          <dd class="registration__meaning">Бесплатно</dd>
+        </div>
+      </dl>
+    </div>
+    <form class="registration__form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+      <ul class="list-reset registration__list">
+        <li class="registration__item">
+          <label class="registration__label" for="profile">Профиль заказа</label>
+          <input class="registration__input" type="text" name="profile" id="profile" value="Название профиля заказа">
+          <button class="btn-reset registration__btn-list" aria-label="Развернуть список">
+            <svg class="registration__btn-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#btn-list"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="registration__item">
+          <label class="registration__label registration__label--required" for="region">Регион</label>
+          <input class="registration__input" type="text" name="region" id="region" value="Астраханская область">
+          <button class="btn-reset registration__btn-list" aria-label="Развернуть список">
+            <svg class="registration__btn-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#btn-list"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="registration__item">
+          <label class="registration__label registration__label--required" for="city">Город</label>
+          <input class="registration__input" type="text" name="city" id="city" value="Астрахань">
+          <button class="btn-reset registration__btn-list" aria-label="Развернуть список">
+            <svg class="registration__btn-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#btn-list"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="registration__item">
+          <label class="registration__label" for="address">Адрес</label>
+          <input class="registration__input" type="text" name="address" id="address" placeholder="Ул. Вишняковская дом 290, кв. 909">
+        </li>
+        <li class="registration__item">
+          <label class="registration__label registration__label--required" for="delivery-date">Дата Доставки</label>
+          <input class="registration__input" type="text" name="delivery-date" id="delivery-date" placeholder="23 февраля">
+        </li>
+        <li class="registration__item">
+          <label class="registration__label" for="user">Фио</label>
+          <input class="registration__input" type="text" name="user" id="user" placeholder="Константинов Константин Константинович">
+        </li>
+        <li class="registration__item">
+          <label class="registration__label registration__label--required" for="tel">Телефон</label>
+          <input class="registration__input" type="tel" name="tel" id="tel" placeholder="+7 (900) 230-40-50">
+        </li>
+        <li class="registration__item">
+          <label class="registration__label" for="email">Электронная почта:</label>
+          <input class="registration__input" type="email" name="email" id="email" placeholder="Sanis@sanis.com">
+        </li>
+        <li class="registration__item">
+          <label class="registration__label registration__label--required" for="payment-method">Способ оплаты</label>
+          <input class="registration__input" type="text" name="payment-method" id="payment-method" value="Оплата по факту">
+          <button class="btn-reset registration__btn-list" aria-label="Развернуть список">
+            <svg class="registration__btn-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#btn-list"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="registration__item">
+          <label class="registration__label" for="coment">Комментарии к заказу</label>
+          <input class="registration__input registration__input--textarea" type="textarea" name="coment" id="coment">
+        </li>
+      </ul>
+      <button class="btn-reset registration__btn" type="submit">Оплатить</button>
+    </form>
+  </div>
+</section>
