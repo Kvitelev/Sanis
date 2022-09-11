@@ -32,6 +32,15 @@
   transform: translate(-50%, -50%);
 }
 
+.production__controls-icon {
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
 @include desktop {
   .production {
     margin-bottom: 115px;

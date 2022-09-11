@@ -46,6 +46,13 @@
   &--active {
     background-color: $black;
   }
+  &:hover {
+    transform: scaleY(1.2);
+    border-radius: 3px;
+  }
+  &:active {
+   background-color: $black;
+  }
 }
 
 .products__icon {
@@ -173,6 +180,13 @@
   background-color: $black;
   border-radius: 3px;
   margin-bottom: 30px;
+  &:hover {
+    background-color: $ronchi;
+    color: $black;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .product-page__list {
@@ -200,6 +214,16 @@
   &--active {
     color: inherit;
     border-bottom: 3px solid $black;
+  }
+  &:hover {
+    color: $ronchi;
+  }
+  &:active {
+    color: rgba($black, 0.7);
+  }
+  &--active:hover,
+  &--active:active {
+    color: $black;
   }
 }
 
@@ -294,16 +318,24 @@
   }
 
   .product-page__item-img {
+    cursor: pointer;
     @include flex-all-center;
     width: 85px;
     height: 85px;
     background-color: $white;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .product-page__btn-increase {
     position: absolute;
     bottom: 16px;
     right: 16px;
+    z-index: 1;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .product-page__box-probuct {

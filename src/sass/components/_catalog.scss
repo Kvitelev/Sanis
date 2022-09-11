@@ -91,6 +91,15 @@
   width: 100%;
   min-height: 40px;
   color: inherit;
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+  &:active {
+    color: $black;
+    background-color: transparent;
+    opacity: 0.5;
+  }
 }
 
 
@@ -112,6 +121,10 @@
     width: 310px;
     color: $white;
     background-color: $black;
+    &:hover {
+      color: $black;
+      background-color: transparent;
+    }
   }
 
   .catalog__list {

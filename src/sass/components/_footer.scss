@@ -52,6 +52,12 @@
     border-bottom: 1px solid $white;
     margin-bottom: 29px;
   }
+  &:hover {
+    color: $ronchi;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .footer__address {
@@ -75,6 +81,15 @@
   height: 34px;
   border-radius: 50%;
   background-color: $white;
+  &:hover {
+    background-color: transparent;
+  }
+  &:hover .footer__social-icon {
+    fill: $ronchi;
+  }
+  &:active .footer__social-icon {
+    opacity: 0.5;
+  }
 }
 
 .footer__social-icon {

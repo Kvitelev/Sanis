@@ -28,6 +28,9 @@
   min-height: 171px;
   background-color: $seashell;
   border-radius: 10px;
+  &:hover {
+    box-shadow: 2px 2px 17px -4px rgba($black, 0.3);
+  }
 }
 
 .partners__btn {
@@ -45,6 +48,22 @@
     right: 0;
     transform: rotate(180deg);
   }
+  &:hover {
+    background-color: $black;
+  }
+  &:active {
+    background-color: transparent;
+  }
+  &:hover .partners__btn-icon {
+    fill: $white;
+  }
+  &:active .partners__btn-icon {
+    fill: $black;
+  }
+}
+
+.partners__btn-icon {
+  fill: $black;
 }
 
 @include desktop {

@@ -19,6 +19,9 @@
   background-color: $seashell;
   border-radius: 10px;
   padding: 105px 25px 32px 19px;
+  &:hover {
+    box-shadow: 2px 2px 17px -4px rgba($black, 0.3);
+  }
 }
 
 .new-products__link {
@@ -84,11 +87,24 @@
   &--previous {
     left: 0;
   }
-
   &--next {
     right: 0;
     transform: rotate(180deg);
   }
+  &:hover {
+    background-color: $white;
+  }
+  &:hover .new-product__btn-icon {
+    fill: $black;
+  }
+  &:active {
+    background-color: transparent;
+    box-shadow: 1px 1px 6px rgba($black, 0.15);
+  }
+}
+
+.new-product__btn-icon {
+  fill: $white;
 }
 
 .banner {

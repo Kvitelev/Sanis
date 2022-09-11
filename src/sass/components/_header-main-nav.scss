@@ -41,4 +41,13 @@
       border-bottom: none;
     }
   }
+
+  .header__nav-link {
+    &:hover {
+      color: $saffronMango;
+    }
+    &:active {
+      color: rgba($black, 0.7);
+    }
+  }
 }

@@ -55,6 +55,23 @@
       left: -15px;
       background-image: url(../img/sprite/filters.svg);
     }
+    &:hover {
+      color: $ronchi;
+    }
+    &--sort:hover::after,
+    &--filters:hover::after {
+      transform: scale(1.2);
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &:hover {
+    background-color: $black;
+    color: $white
+  }
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -90,6 +107,9 @@
   &--big {
     width: 100%;
     height: 380px;
+  }
+  &:hover {
+    box-shadow: 1px 1px 6px rgba($black, 0.15);
   }
 }
 
@@ -302,6 +322,15 @@
       background-size: 21px 15px;
       background-image: url(../img/sprite/category.svg);
     }
+    &:hover {
+      color: $ronchi;
+    }
+    &:hover::after {
+      transform: scale(1.3)
+    }
+    &:active {
+      color: $silver;
+    }
   }
 
   .sorting {
@@ -332,6 +361,12 @@
     &--icon::before {
       top: -2px;
       right: -19px;
+    }
+    &:hover {
+      color: $ronchi;
+    }
+    &:active {
+      color: $silver;
     }
   }
 
@@ -377,6 +412,12 @@
       left: 0px;
       transform: rotate(180deg);
     }
+    &:hover {
+      color: $ronchi;
+    }
+    &:active {
+      color: rgba($black, 0.5);
+    }
   }
 
   .filters__item {
@@ -398,6 +439,14 @@
     border: 2px solid $goldenrod;
   }
 
+  .filters__checkbox:hover + .filters__label::before {
+    border-color: $black;
+  }
+
+  .filters__checkbox:active + .filters__label::before {
+    border-color: rgba($black, 0.5);
+  }
+
   .filters__checkbox:checked + label::after {
     width: 15px;
     height: 15px;
@@ -405,6 +454,7 @@
   }
 
   .filters__label {
+    cursor: pointer;
     padding-left: 44px;
     font-weight: 500;
     font-size: 15px;
@@ -427,6 +477,7 @@
   }
 
   .filters__prise-input {
+    cursor: pointer;
     width: 100px;
     height: 40px;
     border: 2px solid $black;
@@ -436,6 +487,9 @@
       font-size: 18px;
       line-height: 21px;
       color: $black;
+    }
+    &:hover {
+      border-color: $ronchi;
     }
   }
 
@@ -463,6 +517,12 @@
     &--max {
       right: 0;
     }
+    &:hover {
+      border-color: $ronchi;
+    }
+    &:active {
+      border-color: rgba($ronchi, 0.5);
+    }
   }
 
   .filters__btn {
@@ -478,6 +538,13 @@
     margin-bottom: 16px;
     &:last-child {
       margin-bottom: 0;
+    }
+    &:hover {
+      color: $black;
+      border-color: $ronchi;
+    }
+    &:active {
+      border-color: $black;
     }
   }
 
@@ -524,6 +591,24 @@
       height: 45px;
       border: 2px solid $black;
       border-radius: 3px;
+    }
+    &:hover {
+      color: $ronchi;
+    }
+    &:active {
+      color: rgba($black, 0.5);
+    }
+    &--active:hover {
+      color: $black;
+    }
+  }
+
+  .set-bar__btn {
+    &:hover {
+      transform: scale(1.5);
+    }
+    &:active {
+      opacity: 0.5;
     }
   }
 

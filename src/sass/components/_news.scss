@@ -11,7 +11,7 @@
   margin-bottom: 29px;
 }
 
-.news__figure {
+.news__link-page {
   @include flex;
   flex-direction: column;
   position: relative;
@@ -27,8 +27,9 @@
 }
 
 .news__time,
-.news__figcaption {
+.news__description {
   font-weight: 500;
+  color: $black;
 }
 
 .news__time {
@@ -36,7 +37,7 @@
   line-height: 15px;
 }
 
-.news__figcaption {
+.news__description {
   font-size: 14px;
   line-height: 20px;
   margin-top: 6px;
@@ -54,6 +55,13 @@
   border: 2px solid $black;
   border-radius: 3px;
   text-transform: none;
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .news__btn {
@@ -82,6 +90,18 @@
   &--next-news {
     right: -20px;
     transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: $black;
+  }
+  &:hover .news__btn-icon {
+    fill: $white;
+  }
+  &:active {
+    background-color: transparent;
+  }
+  &:active .news__btn-icon {
+    fill: $black;
   }
 }
 
@@ -151,7 +171,7 @@
     }
   }
 
-  .news__figcaption {
+  .news__description {
     margin: 0;
     &--big {
       color: $white;
@@ -174,6 +194,13 @@
       height: 12px;
       background: url(../img/sprite/all-news.svg) no-repeat;
       background-size: 37px 12px;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $black;
+    }
+    &:hover::before {
+      transform: scale(1.3);
     }
   }
 }

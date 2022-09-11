@@ -76,6 +76,14 @@
   color: $white;
   background-color: $black;
   margin-bottom: 45px;
+  &:hover {
+    background-color: $ronchi;
+    color: $black;
+    // border: 2px solid $black;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .contract__btn-slider {
@@ -92,6 +100,22 @@
     right: 0;
     transform: rotate(180deg);
   }
+  &:hover {
+    background-color: $black;
+  }
+  &:active {
+    background-color: transparent;
+  }
+  &:hover .contract__btn-icon {
+    fill: $white;
+  }
+  &:active .contract__btn-icon {
+    fill: $black;
+  }
+}
+
+.contract__btn-icon {
+  fill: $silver;
 }
 
 .contract__toggle {
@@ -101,6 +125,13 @@
     width: 31px;
     height: 2px;
     background-color: $alto;
+    &:hover {
+      transform: scaleY(1.5);
+      border-radius: 3px;
+    }
+    &:active {
+      background-color: $black;
+    }
   }
   &-btn--active {
     background-color: $black;

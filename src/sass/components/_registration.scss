@@ -28,6 +28,12 @@
 .registration__link {
   color: inherit;
   border-bottom: 1px solid $black;
+  &:hover {
+    color: $ronchi;
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .registration__wrapper,
@@ -106,6 +112,22 @@
     position: absolute;
     top: 35px;
     right: 13px;
+  }
+  &:hover {
+    color: $black;
+    background-color: $ronchi;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.registration__btn-icon {
+  &:hover {
+    fill: $ronchi;
+  }
+  &:active {
+    fill: $silver;
   }
 }
 

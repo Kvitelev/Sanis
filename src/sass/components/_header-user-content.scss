@@ -44,36 +44,44 @@
 
   .header__flex {
     @include flex-all-center;
+    position: relative;
   }
 
   .header__box {
-    position: relative;
-    top: -5px;
-    left: 742px;
-    column-gap: 72px;
-  }
-
-  .header__link {
-    order: -1;
+    &--search {
+      position: absolute;
+      top: 25px;
+      right: 81px;
+      z-index: 1;
+    }
+    &--user {
+      position: absolute;
+      top: 25px;
+      right: 55px;
+      column-gap: 70px;
+    }
   }
 
   .header__logo {
-    position: relative;
-    left: 52px;
     width: 118px;
     height: 86px;
   }
 
   .header__search {
+    position: absolute;
     width: 500px;
-    top: 15px;
-    left: -392px;
+    top: 0;
+    left: -600px;
   }
 
-  .header__icon-search {
-    position: absolute;
-    top: -11px;
-    left: 45px;
-    z-index: 1;
+  .btn-search,
+  .header__icon-user,
+  .header__icon-basket {
+    &:hover {
+      transform: scale(1.5);
+    }
+    &:active {
+      opacity: 0.7;
+    }
   }
 }
