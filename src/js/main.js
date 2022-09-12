@@ -45,3 +45,14 @@ document.addEventListener('keydown', function (evt) {
     popup.style.display = 'none';
   }
 });
+
+// Воизпроведение видео
+const video = document.querySelectorAll(".production__video");
+const btnPlay = document.querySelector(".production__controls")
+
+for (let i =0; i < video.length; i++) {
+  btnPlay.addEventListener('click', function () {
+    video[i].play();
+    btnPlay.style.display = 'none';
+  })
+}
