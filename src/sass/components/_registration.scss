@@ -91,7 +91,7 @@
   line-height: inherit;
   border: 2px solid $black;
   border-radius: 3px;
-  padding: 0 15px;
+  padding: 0 50px 0 15px;
   min-height: 56px;
   &::placeholder {
     color: inherit;
@@ -133,8 +133,11 @@
 
 @include desktop {
   .registration {
-    position: relative;
     margin-bottom: 109px;
+  }
+
+  .registration__block {
+    position: relative;
   }
 
   .registration__title {

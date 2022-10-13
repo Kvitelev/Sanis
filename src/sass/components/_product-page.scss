@@ -128,6 +128,7 @@
   @include flex;
   flex-wrap: wrap;
   column-gap: 5px;
+  row-gap: 10px;
   border-bottom: 1px solid $alto;
   padding-bottom: 32px;
 }
@@ -231,6 +232,9 @@
   line-height: 22px;
   &--main {
     margin-bottom: 25px;
+    &:not(:nth-child(2)) {
+      display: none;
+    }
   }
   &--complete {
     margin-bottom: 24px;
@@ -254,22 +258,17 @@
   margin-bottom: 23px;
 }
 
-@include desktop {
+@include tablet {
   .product-page {
     margin-bottom: 108px;
   }
 
   .product-page__flex {
-    @include flex;
-    column-gap: 27px;
     margin-bottom: 61px;
   }
 
   .product-page__box-img {
     position: relative;
-    background-color: $wildSand;
-    width: 790px;
-    height: 750px;
     margin-bottom: 0;
     row-gap: 0;
     &::after {
@@ -309,10 +308,11 @@
 
   .product-page__list-img {
     @include flex;
+    flex-direction: column;
     position: absolute;
-    bottom: 20px;
-    left: 255px;
-    column-gap: 12px;
+    bottom: 60px;
+    left: 30px;
+    gap: 12px;
     z-index: 1;
   }
 
@@ -339,7 +339,6 @@
 
   .product-page__box-probuct {
     padding-top: 7px;
-    width: 750px;
   }
 
   .product-page__title {
@@ -438,7 +437,7 @@
     }
     &--complete {
       order: 1;
-      margin-bottom: 0;
+      margin-bottom: 10px;
       width: 420px;
       margin-top: 50px;
     }
@@ -446,11 +445,6 @@
 
   .complete {
     margin-bottom: 58px
-  }
-
-  .complete__box {
-    @include flex;
-    column-gap: 25px;
   }
 
   .products__list {
@@ -495,6 +489,47 @@
     &--complete {
       line-height: 16px;
     }
+  }
+}
+
+@include desktop {
+  .product-page__flex {
+    @include flex;
+    column-gap: 27px;
+  }
+
+  .product-page__box-img {
+    background-color: $wildSand;
+    width: 790px;
+    height: 750px;
+  }
+
+  .product-page__img{
+    &--desktop {
+      width: 790px;
+      height: 750px;
+    }
+  }
+
+  .product-page__list-img {
+    flex-direction: row;
+    bottom: 20px;
+    left: 255px;
+  }
+
+  .product-page__box-probuct {
+    width: 750px;
+  }
+
+  .product-page__description {
+    &--complete {
+      margin-bottom: 0;
+    }
+  }
+
+  .complete__box {
+    @include flex;
+    column-gap: 25px;
   }
 }
 

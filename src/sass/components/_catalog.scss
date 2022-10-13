@@ -18,6 +18,9 @@
 .catalog__item {
   @include flex;
   flex-direction: column;
+  &:hover {
+    box-shadow: 2px 2px 17px -4px rgba($black, 0.3);
+  }
 }
 
 .catalog__product-title {
@@ -102,8 +105,7 @@
   }
 }
 
-
-@include desktop {
+@include tablet {
   .catalog {
     margin-bottom: 120px;
   }
@@ -118,7 +120,7 @@
   }
 
   .catalog__link-all {
-    width: 310px;
+    width: 100%;
     color: $white;
     background-color: $black;
     &:hover {
@@ -129,10 +131,157 @@
 
   .catalog__list {
     display: grid;
-    grid-template-columns: repeat(5, 310px);
-    grid-template-rows: repeat(3, 310px);
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(4, 300px);
     gap: 10px;
     margin-bottom: 46px;
+  }
+
+  .catalog__item {
+    position: relative;
+    background-color: $seashell;
+    border-radius: 10px;
+    &--necklace {
+      grid-column: 1/5;
+      grid-row: 1/3;
+    }
+    &--rings {
+      grid-column: 5/6;
+      grid-row: 1/2;
+    }
+    &--bracelets {
+      grid-column: 5/6;
+      grid-row: 2/3;
+    }
+    &--suspensions {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    &--cufflinks {
+      grid-column: 2/5;
+      grid-row: 3/4;
+    }
+    &--gifts {
+      grid-column: 5/6;
+      grid-row: 3/4;
+    }
+    &--religious {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+    &--wood {
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+    &--collections {
+      grid-column: 3/4;
+      grid-row: 4/5;
+    }
+    &--brooches {
+      grid-column: 4/5;
+      grid-row: 4/5;
+    }
+    &--piercing {
+      grid-column: 5/6;
+      grid-row: 4/5;
+    }
+  }
+
+  .catalog__product-title {
+    order: 0;
+    padding: 25px 0 0 20px;
+    &--text::before {
+      content: "Изделия ";
+    }
+  }
+
+  .catalog__probuct-bg {
+    width: 0;
+    height: 0;
+    background-color: $seashell;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
+
+  .catalog__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    &--necklace {
+      min-width: 630px;
+      min-height: 300px;
+      background: url(../img/catalog/Necklace-desktop.png) no-repeat center;
+      background-size: 630px 300px;
+    }
+    &--rings {
+      min-width: 132px;
+      min-height: 136px;
+      background-size: 132px 136px;
+    }
+    &--bracelets {
+      min-width: 200px;
+      min-height: 200px;
+      background-size: 200px 200px;
+    }
+    &--suspensions {
+      min-width: 200px;
+      min-height: 180px;
+      background-size: 200px 180px;
+    }
+    &--cufflinks {
+      min-width: 342px;
+      min-height: 262px;
+      background-size: 342px 262px;
+    }
+    &--gifts {
+      min-width: 237px;
+      min-height: 231px;
+      background-size: 237px 231px;
+    }
+    &--religious {
+      min-width: 180px;
+      min-height: 223px;
+      background-size: 180px 223px;
+    }
+    &--wood {
+      min-width: 127px;
+      min-height: 180px;
+      background-size: 127px 180px;
+    }
+    &--collections {
+      min-width: 200px;
+      min-height: 180px;
+      background-size: 200px 180px;
+    }
+    &--brooches {
+      min-width: 239px;
+      min-height: 239px;
+      background-size: 239px 239px;
+    }
+    &--piercing {
+      min-width: 95px;
+      min-height: 183px;
+      background: url(../img/catalog/piercing.png) no-repeat center;
+      background-size: 95px 183px;
+    }
+  }
+
+  .products-icon {
+    display: none;
+  }
+}
+
+
+@include desktop {
+  .catalog__link-all {
+    width: 300px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(5, 310px);
+    grid-template-rows: repeat(3, 310px);
   }
 
   .catalog__item {
@@ -185,34 +334,12 @@
     }
   }
 
-  .catalog__product-title {
-    order: 0;
-    padding: 25px 0 0 20px;
-    &--text::before {
-      content: "Изделия ";
-    }
-  }
-
-  .catalog__probuct-bg {
-    width: 0;
-    height: 0;
-    background-color: $seashell;
-    border-radius: 10px;
-    margin-bottom: 0;
-  }
-
   .catalog__link {
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    &--necklace {
-      min-width: 630px;
-      min-height: 300px;
-      background: url(../img/catalog/Necklace-desktop.png) no-repeat center;
-      background-size: 630px 300px;
-    }
     &--rings {
       min-width: 172px;
       min-height: 196px;
@@ -253,20 +380,10 @@
       min-height: 201px;
       background-size: 226px 201px;
     }
-    &--brooches {
-      min-width: 239px;
-      min-height: 239px;
-      background-size: 239px 239px;
-    }
-    &--piercing {
-      min-width: 95px;
-      min-height: 183px;
-      background: url(../img/catalog/piercing.png) no-repeat center;
-      background-size: 95px 183px;
-    }
   }
 
   .products-icon {
+    display: block;
     &--all,
     &--gloves {
       bottom: 24px;

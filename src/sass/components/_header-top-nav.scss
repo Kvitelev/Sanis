@@ -9,28 +9,35 @@
   }
 }
 
-@include desktop {
+@include tablet {
   .top-nav {
-    @include flex-all-sb;
-    padding-top: 6px;
-    min-height: 30px;
+    @include flex-v-center;
+    column-gap: 50px;
+    padding: 6px 20px 0px;
+    min-height: 29px;
     font-weight: 600;
     font-size: 10px;
     line-height: 12px;
     color: $white;
     text-transform: uppercase;
-    margin-bottom: 20px;
+  }
+
+  .top-nav__wrapper {
+    &--phone {
+      margin-left: auto;
+    }
   }
 
   .top-nav__address {
+    display: block;
     position: relative;
-    color: $white;
-    padding-left: 77px;
+    color: currentColor;
+    padding-left: 15px;
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 63px;
+      left: 0;
       width: 8px;
       height: 12px;
       background-image: url(../img/sprite/adress-maps.svg);
@@ -40,35 +47,35 @@
   }
 
   .top-nav__navigation {
-    transform: translateX(-163px);
-    max-width: 500px;
+    max-width: 300px;
   }
 
   .top-nav__list {
     @include flex;
     flex-wrap: wrap;
-    column-gap: 47px;
+    column-gap: 20px;
   }
 
-  .top-nav__item {
+  .top-nav__item,
+  .top-nav__phone,
+  .top-nav__address {
     margin-bottom: 5px;
   }
 
   .top-nav__link {
-    color: inherit;
+    color: currentColor;
   }
 
   .top-nav__title {
     font-weight: inherit;
     font-size: inherit;
-    transform: translateX(-331px);
   }
 
   .top-nav__phone {
+    display: block;
     font-size: 13px;
     line-height: 15px;
-    color: inherit;
-    padding-right: 52px;
+    color: currentColor;
   }
 
   .top-nav__address,
@@ -80,5 +87,27 @@
     &:active {
       opacity: 0.7;
     }
+  }
+}
+
+@include desktop {
+  .top-nav {
+    column-gap: 135px;
+    padding: 6px 54px 0px;
+  }
+
+  .top-nav__address {
+    padding-left: 23px;
+    &::before {
+      left: 8px;
+    }
+  }
+
+  .top-nav__navigation {
+    max-width: 500px;
+  }
+
+  .top-nav__list {
+    column-gap: 47px;
   }
 }

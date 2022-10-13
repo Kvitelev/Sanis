@@ -20,21 +20,22 @@
   @include flex;
   counter-reset: number;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 170px;
   margin-bottom: 30px;
 }
 
 .contract__item {
+  @include flex;
+  align-items: flex-end;
   position: relative;
   font-weight: 500;
   font-size: 22px;
   line-height: 27px;
+  min-height: 170px;
   &::after {
     counter-increment: number;
     content: counter(number);
     position: absolute;
-    top: -140px;
+    top: 3px;
     left: 116px;
     font-size: 16px;
     line-height: 20px;
@@ -43,7 +44,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -95px;
+    top: 47px;
     height: 73px;
     background-repeat: no-repeat;
   }
@@ -79,7 +80,6 @@
   &:hover {
     background-color: $ronchi;
     color: $black;
-    // border: 2px solid $black;
   }
   &:active {
     opacity: 0.5;
@@ -138,13 +138,7 @@
   }
 }
 
-@include mobile-max {
-  .contract__item:not(:first-child) {
-      display: none;
-  }
-}
-
-@include desktop {
+@include tablet {
   .contract__btn-slider,
   .contract__toggle-btn {
     display: none;
@@ -161,22 +155,37 @@
 
   .contract__list {
     flex-wrap: wrap;
-    align-items: flex-end;
     flex-direction: row;
-    column-gap: 160px;
+    column-gap: 147px;
+    row-gap: 50px;
     margin-bottom: 50px;
   }
 
   .contract__item {
     &::after {
-      top: -157px;
+      top: -10px;
       left: 113px;
     }
   }
 
   .contract__btn {
     margin-bottom: 0;
-    margin-left: 295px;
     align-self: flex-start;
+  }
+}
+
+@include desktop {
+  .contract__list {
+    column-gap: 160px;
+  }
+
+  .contract__btn {
+    margin-left: 294px;
+  }
+}
+
+@include mobile-max {
+  .contract__item:not(:first-child) {
+      display: none;
   }
 }

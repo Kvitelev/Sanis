@@ -58,8 +58,8 @@
   color: $white;
   background-color: $black;
   border-radius: 3px;
-  padding: 0 5px;
-  min-height: 26px;
+  padding: 5px;
+  text-align: center;
   &--new,
   &--hit {
     text-transform: uppercase;
@@ -127,7 +127,7 @@
   margin-bottom: 19px;
 }
 
-@include desktop {
+@include tablet {
   .new-products {
     margin-bottom: 122px;
   }
@@ -158,14 +158,14 @@
 
   .new-products__item{
     padding: 105px 25px 24px 24px;
-    &:first-child {
+    &:nth-child(n+4) {
       display: none;
     }
   }
 
   .new-products__link-img {
-    width: 330px;
-    height: 314px;
+    width: 230px;
+    height: 214px;
     margin-bottom: 6px;
   }
 
@@ -184,15 +184,15 @@
   }
 
   .new-products__btn {
-    top: 333px;
+    top: 280px;
     width: 45px;
     height: 45px;
     &--previous {
-      left: 142px;
+      left: 20px;
     }
 
     &--next {
-      right: 142px;
+      right: 20px;
       transform: rotate(180deg);
     }
   }
@@ -205,9 +205,9 @@
   .banner {
     justify-content: flex-start;
     align-items: flex-end;
-    min-height: 600px;
+    min-height: 400px;
     background-image: url(../img/poster/baner-desktop.jpg);
-    background-size: 100% 600px;
+    background-size: 100% 400px;
   }
 
   .banner__description {
@@ -216,6 +216,39 @@
     color: $white;
     padding: 156px 87px 0 23px;
     margin-bottom: 0px;
+    max-width: 450px;
+  }
+}
+
+@include desktop {
+  .new-products__item{
+    &:nth-child(n+4) {
+      display: block;
+    }
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .new-products__link-img {
+    width: 330px;
+    height: 314px;
+  }
+
+  .new-products__btn {
+    top: 333px;
+    &--previous {
+      left: 142px;
+    }
+
+    &--next {
+      right: 142px;
+    }
+  }
+
+  .banner {
+    min-height: 600px;
+    background-size: 100% 600px;
   }
 }
 

@@ -1,7 +1,5 @@
-@include mobile-max {
-  .header__nav {
-    display: none;
-  }
+.header__nav {
+  display: none;
 }
 
 .header__nav-list {
@@ -16,14 +14,26 @@
 }
 
 .header__nav-link {
+  display: block;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 16px;
+  padding: 5px;
   color: $black;
 }
 
+@include tablet {
+  .header__nav-link {
+    padding: 5px 0;
+  }
+}
+
 @include desktop {
+  .header__nav {
+    display: block;
+  }
+
   .header__nav {
     margin-bottom: 11px;
   }

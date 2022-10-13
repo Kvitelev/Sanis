@@ -5,6 +5,7 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   display: none;
+  animation: open 2s;
 }
 
 .popup__form {
@@ -163,5 +164,15 @@
   .popup__close {
     top: 15px;
     right: 15px;
+  }
+}
+
+@keyframes open {
+  0% {
+    scale: 2;
+  }
+
+  70% {
+    scale: 1;
   }
 }

@@ -8,12 +8,27 @@ html {
   box-sizing: inherit;
 }
 
+*:hover {
+  transition: 0.6s ease;
+}
+
 a {
   text-decoration: none;
 }
 
 p {
   margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
 }
 
 .body {
@@ -83,6 +98,10 @@ p {
   max-width: 335px;
   margin: 0 auto;
   padding: 0 20px;
+  @include tablet {
+    max-width: 1000px;
+    padding: 0 50px;
+  }
   @include desktop {
     max-width: 1590px;
     padding: 0 165px;

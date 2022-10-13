@@ -4,8 +4,16 @@
   background-color: $swissCoffee;
   background-image: url(../img/header-slaider/slideshow-1.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  &--bg-2 {
+    background-image: url(../img/header-slaider/slideshow-desktop-2.jpg);
+    background-size: 400px 600px;
+  }
+  &--bg-3 {
+    background-image: url(../img/header-slaider/slideshow-desktop-3.jpg);
+    background-size: 400px 600px;
+  }
   &-flex {
     @include flex;
     min-height: 558px;
@@ -14,8 +22,11 @@
   }
 }
 
+.header__slider-content {
+  max-width: 270px;
+}
+
 .header__slider-description {
-  width: 270px;
   font-weight: 300;
   font-size: 26px;
   line-height: 29px;
@@ -55,36 +66,46 @@
   }
 }
 
-@include desktop {
+@include tablet {
   .header__slider {
-    min-height: 800px;
     background-image: url(../img/header-slaider/slideshow-desktop-1.jpg);
-    background-size: contain;
-    background-position: 216px 0;
+    background-size: cover;
+    background-position: center 0;
+    &--bg-2 {
+      background-image: url(../img/header-slaider/slideshow-desktop-2.jpg);
+    }
+    &--bg-3 {
+      background-image: url(../img/header-slaider/slideshow-desktop-3.jpg);
+    }
     &-flex {
       position: relative;
-      min-height: 755px;
       justify-content: center;
       align-items: flex-end;
     }
   }
 
-  .header__slider-description {
+  .header__slider-content {
     position: absolute;
-    top: 314px;
-    right: 249px;
-    width: 500px;
+    top: 105px;
+    right: 88px;
+    max-width: 350px;
+    &--left {
+      top: 215px;
+      left: 156px;
+    }
+  }
+
+  .header__slider-description {
     font-size: 34px;
     line-height: 40px;
+    margin-bottom: 33px;
     color: $black;
   }
 
   .header__slider-link {
     background-color: $black;
     border: 2px solid $black;
-    position: absolute;
-    top: 425px;
-    right: 597px;
+    margin-bottom: 0;
     &:hover {
       border-color: $black;
       color: $black;
@@ -98,7 +119,7 @@
   .header__box-toggle {
     position: absolute;
     bottom: 0px;
-    right: 790px;
+    right: 375px;
   }
 
   .header__toggle {
@@ -116,23 +137,49 @@
   }
 
   .header__slider-btn {
+    position: absolute;
+    top:300px;
     &--previous {
-      position: absolute;
-      top: 404px;
-      left: 62px;
+      left: 30px;
       &:hover {
         transform: scale(2);
       }
     }
     &--next {
-      position: absolute;
-      top: 407px;
-      right: 53px;
+      right: 30px;
       transform: rotate(180deg);
       &:hover {
         transform: scale(2) rotate(180deg);
       }
     }
+  }
+}
+
+@include desktop {
+  .header__slider {
+    background-position: center 0;
+    min-height: 800px;
+    &-flex {
+      min-height: 755px;
+    }
+  }
+
+  .header__slider-content {
+    top: 313px;
+    right: 247px;
+    max-width: 500px;
+    &--left {
+      top: 250px;
+      left: 300px;
+    }
+  }
+
+  .header__box-toggle {
+    right: 788px;
+  }
+
+  .header__slider-btn {
+    top: 407px;
   }
 }
 

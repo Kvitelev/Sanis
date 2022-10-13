@@ -137,11 +137,11 @@
   height: 200px
 }
 
-@include desktop {
+@include tablet {
   .news-page__top-blok {
     @include flex-all-center;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 63px;
   }
 
   .news-page__title {
@@ -180,11 +180,11 @@
 
   .news-page__description {
     &--center {
-      width: 875px;
+      width: 675px;
       text-align: center;
     }
     &--width {
-      width: 700px;
+      width: 480px;
     }
   }
 
@@ -193,16 +193,16 @@
     column-gap: 38px;
     &--one,
     &--three {
-      grid-template-columns: repeat(2, 790px);
-      grid-template-rows: 800px;
+      grid-template-columns: repeat(2, 480px);
+      grid-template-rows: 500px;
     }
     &--one {
       margin-bottom: 113px;
     }
     &--two {
-      grid-template-columns: repeat(2, 790px);
-      grid-template-rows: repeat(2, 400px);
-      column-gap: 10px;
+      grid-template-columns: repeat(2, 480px);
+      grid-template-rows: repeat(2, 250px);
+      column-gap: 30px;
       margin-bottom: 153px;
     }
     &--three {
@@ -219,12 +219,13 @@
   }
 
   .news-page__bg {
-    width: 790px;
-    height: 800px;
-    background-size: 790px 800px;
+    width: 480px;
+    height: 500px;
+    background-size: 480px 500px;
+    background-repeat: no-repeat;
     margin-bottom: 0;
     &-set {
-      column-gap: 90px;
+      column-gap: 40px;
       align-self: end;
       margin-bottom: 0;
     }
@@ -244,9 +245,9 @@
     }
     &--earrings-1,
     &--earrings-2 {
-      width: 310px;
-      height: 310px;
-      background-size: 310px 310px;
+      width: 150px;
+      height: 150px;
+      background-size: 150px 150px;
     }
   }
 
@@ -271,7 +272,7 @@
   }
 
   .news-page__text {
-    width: 1100px;
+    width: 1000px;
     margin-bottom: 26px;
   }
 
@@ -314,10 +315,81 @@
 
   .news__list--news-page {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .news__item--news-page {
+    width: 450px;
+  }
+}
+
+@include desktop {
+  .news-page__description {
+    &--center {
+      width: 875px;
+    }
+    &--width {
+      width: 700px;
+    }
+  }
+
+  .news-page__blok {
+    &--one,
+    &--three {
+      grid-template-columns: repeat(2, 790px);
+      grid-template-rows: 800px;
+    }
+    &--two {
+      grid-template-columns: repeat(2, 790px);
+      grid-template-rows: repeat(2, 400px);
+      column-gap: 10px;
+    }
+  }
+
+  .news-page__bg {
+    width: 790px;
+    height: 800px;
+    background-size: 790px 800px;
+    &-set {
+      column-gap: 90px;
+    }
+    &--earrings-1,
+    &--earrings-2 {
+      width: 310px;
+      height: 310px;
+      background-size: 310px 310px;
+    }
+  }
+
+  .news-page__text-wrapper {
+    align-self: center;
+    &--one {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    &--two {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      padding-top: 48px;
+    }
+  }
+
+  .news-page__text {
+    width: 1100px;
+  }
+
+  .news__list--news-page {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .news__item {
+    width: 390px;
   }
 
   .news__img--news-page {
-    width: 390px;
+    width: 100%;
   }
 }
 

@@ -1,20 +1,16 @@
 <div class="header__user-content">
   <div class="container header__flex">
     <div class="header__box header__box--search">
-      <button class="btn-reset btn-burger" aria-label="Открыть меню продукции"></button>
-      <button class="btn-reset btn-search" aria-label="Открыть строку поика">
+      <button class="btn-reset btn-burger" type="button" aria-label="Открыть меню продукции"></button>
+      <button class="btn-reset btn-search" type="button" aria-label="Открыть строку поика">
         <svg class="header__icon-search" width="19" height="19" role="img" aria-label="Иконка поиска">
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
       </button>
-      <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
-        <input class="header__search header__search--none" type="search" id="search" name="search" aria-label="Строка ввода для поиска товара">
-        <button class="visually-hidden" type="submit"></button>
-      </form>
     </div>
 
     <a class="header__link" href="index.html" aria-label="Переход на главную страницу">
-      <img class="header__logo" src="img/logo/logo.png" alt="Логотип Sanis" width="63" height="46">
+      <img class="header__logo" src="img/logo/Sanis-logo.svg" alt="Логотип Sanis" width="63" height="46">
     </a>
 
     <div class="header__box header__box--user">
@@ -29,5 +25,11 @@
         </svg>
       </a>
     </div>
+
+    <form class="header__form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+      <input class="header__search" type="search" id="search" name="search" aria-label="Строка ввода для поиска товара">
+      <button class="btn-reset header__form-close" type="button" aria-label="Закрыть"></button>
+      <button class="visually-hidden" type="submit" aria-label="Отправить"></button>
+    </form>
   </div>
 </div>

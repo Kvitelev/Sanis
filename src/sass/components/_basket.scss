@@ -297,7 +297,7 @@
   line-height: 25px;
   width: 100%;
   min-height: 30px;
-  padding: 10px 10px;
+  padding: 10px 0;
   color: $white;
   background-color: $black;
   border-radius: 3px;
@@ -310,7 +310,22 @@
   }
 }
 
+@include tablet {
+  .table {
+    display: none;
+  }
+
+  .basket__item {
+    @include flex-v-center;
+    flex-direction: column;
+  }
+}
+
 @include desktop {
+  .table {
+    display: block;
+  }
+
   .basket__list,
   .basket__result {
     display: none;

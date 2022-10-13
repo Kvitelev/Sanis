@@ -3,8 +3,18 @@
     <h1 class="title products__title">Серьги</h1>
     <div class="products__box">
       <div class="products__filters">
-        <button class="btn-reset products__btn-filters products__btn-filters--sort">Сортировка</button>
-        <button class="btn-reset products__btn-filters products__btn-filters--filters">Фильтры</button>
+        <button class="btn-reset products__btn-filters products__btn-filters--sort" type="button">Сортировка</button>
+        <button class="btn-reset close-category" type="button">
+          <svg class="close-icon" width="12" height="12">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <button class="btn-reset products__btn-filters products__btn-filters--filters" type="button">Фильтры</button>
+        <button class="btn-reset close-filters" type="button">
+          <svg class="close-icon" width="12" height="12">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
       </div>
       <div class="category">
         <ul class="list-reset category__list">
@@ -34,9 +44,14 @@
           <button class="btn-reset sorting__btn sorting__btn--active">60</button>
         </div>
       </div>
-      <form action="https://echo.htmlacademy.ru" method="post" class="filters" target="_blank">
+      <form class="filters" action="https://echo.htmlacademy.ru" method="post" target="_blank">
         <div class="filters__box filters__box--type">
-          <button class="btn-reset filters__list-btn filters__list-btn--type" type="button">Тип</button>
+          <button class="btn-reset filters__list-btn" type="button">
+            <svg class="filters__list-btn-icon" width="15" height="20">
+              <use xlink:href="img/sprite.svg#sort-icon"></use>
+            </svg>
+            <span>Тип</span>
+          </button>
           <ul class="list-reset filters__list">
             <li class="filters__item">
               <input class="visually-hidden filters__checkbox" type="checkbox" id="earrings" name="earrings">
@@ -73,7 +88,12 @@
           </ul>
         </div>
         <div class="filters__prise">
-          <button class="btn-reset filters__list-btn filters__list-btn--price" type="button">Цены</button>
+          <button class="btn-reset filters__list-btn" type="button">
+            <svg class="filters__list-btn-icon" width="15" height="20">
+              <use xlink:href="img/sprite.svg#sort-icon"></use>
+            </svg>
+            <span>Цены</span>
+          </button>
           <div class="filters__prise-box">
             <div class="filters__prise-box filters__prise-box--input-price">
               <input class="filters__prise-input" type="number" name="min-prise" id="min-prise" placeholder="10 000">
@@ -91,7 +111,12 @@
           </div>
         </div>
         <div class="filters__box filters__box--material">
-          <button class="btn-reset filters__list-btn filters__list-btn--material" type="button">Материал</button>
+          <button class="btn-reset filters__list-btn" type="button">
+            <svg class="filters__list-btn-icon" width="15" height="20">
+              <use xlink:href="img/sprite.svg#sort-icon"></use>
+            </svg>
+            <span>Материал</span>
+          </button>
           <ul class="list-reset filters__list">
             <li class="filters__item">
               <input class="visually-hidden filters__checkbox" type="checkbox" id="red-gold" name="red-gold">
@@ -112,7 +137,12 @@
           </ul>
         </div>
         <div class="filters__box filters__box--insert">
-          <button class="btn-reset filters__list-btn filters__list-btn--material-insert" type="button">Материал вставки</button>
+          <button class="btn-reset filters__list-btn" type="button">
+            <svg class="filters__list-btn-icon" width="15" height="20">
+              <use xlink:href="img/sprite.svg#sort-icon"></use>
+            </svg>
+            <span>Материал вставки</span>
+          </button>
           <ul class="list-reset filters__list">
             <li class="filters__item">
               <input class="visually-hidden filters__checkbox" type="checkbox" id="inser-off" name="inser-off">
